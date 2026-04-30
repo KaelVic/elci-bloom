@@ -85,7 +85,7 @@ export function Packages() {
                   ))}
                 </ul>
 
-                <div className="mt-10 flex items-end justify-between gap-4">
+                <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
                   <div>
                     <div className="text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
                       Investimento
@@ -96,7 +96,7 @@ export function Packages() {
                     href={whatsappLink(`Olá, gostaria de agendar o pacote ${p.name} no Espaço Elci Gomes.`)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-shine inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-3 text-[11px] tracking-[0.18em] uppercase text-background hover:bg-rose-deep transition-colors"
+                    className="btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-5 py-3 text-[11px] tracking-[0.18em] uppercase text-background hover:bg-rose-deep transition-colors"
                   >
                     Quero Agendar
                   </a>
