@@ -72,26 +72,16 @@ export function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
             </div>
-
-            {/* Floating badges */}
-            <div className="absolute -left-6 top-10 hidden md:block">
-              <FloatingBadge label={badges[0]} />
-            </div>
-            <div className="absolute -right-4 top-32 hidden md:block">
-              <FloatingBadge label={badges[1]} />
-            </div>
-            <div className="absolute -left-4 bottom-28 hidden md:block">
-              <FloatingBadge label={badges[2]} />
-            </div>
-            <div className="absolute -right-6 bottom-8 hidden md:block">
-              <FloatingBadge label={badges[3]} />
-            </div>
           </div>
 
-          {/* Mobile badges */}
-          <div className="mt-6 flex flex-wrap justify-center gap-2 md:hidden">
+          {/* Trust badges — discreet row beneath the portrait */}
+          <div className="mt-8 flex flex-wrap justify-center gap-2">
             {badges.map((b) => (
-              <span key={b} className="glass rounded-full px-4 py-1.5 text-[11px] tracking-[0.18em] uppercase text-foreground/70">
+              <span
+                key={b}
+                className="glass rounded-full px-4 py-1.5 text-[10px] tracking-[0.2em] uppercase text-foreground/70"
+              >
+                <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-gold align-middle" />
                 {b}
               </span>
             ))}
@@ -102,11 +92,3 @@ export function Hero() {
   );
 }
 
-function FloatingBadge({ label }: { label: string }) {
-  return (
-    <div className="glass rounded-full px-4 py-2 text-[11px] tracking-[0.2em] uppercase text-foreground/75 whitespace-nowrap">
-      <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-gold align-middle" />
-      {label}
-    </div>
-  );
-}
