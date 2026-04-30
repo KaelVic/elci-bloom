@@ -71,6 +71,7 @@ export function Hero() {
                 loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
+            </div>
           </div>
 
           {/* Trust badges — discreet row beneath the portrait */}
@@ -91,11 +92,3 @@ export function Hero() {
   );
 }
 
-function FloatingBadge({ label }: { label: string }) {
-  return (
-    <div className="glass rounded-full px-4 py-2 text-[11px] tracking-[0.2em] uppercase text-foreground/75 whitespace-nowrap">
-      <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-gold align-middle" />
-      {label}
-    </div>
-  );
-}
